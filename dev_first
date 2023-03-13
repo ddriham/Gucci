@@ -1,7 +1,12 @@
 #!/bin/bash
 
-# this is a bash script that show how to use if statment
+# this is a bash script that show how to use if and else statment
 
-if [ bla bla ]; then
+read -p "please enter a directory you want to check: " bla_bla
+
+if [ -d ${bla_bla} ]; then
 	echo "bla bla"
+else
+	echo "False!"
+	cat etc/groups | grep root
 fi
